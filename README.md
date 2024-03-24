@@ -1,6 +1,8 @@
 # Neovim configuration
 
+
 ## Installation:
+
 
 - [ ] Steps:
 ```bash
@@ -15,20 +17,19 @@ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 cd ~/.config/nvim
 ```
 
+
 ---
 
+
 ## Commands:
+
+Starter combinations:
 
 - [ ] Starter key == sp ==> `space`
 
 - [ ] Command starter ==> `:`
 
 - [ ] Change theme ==> `sp + t + h` 
-
-- [ ] Syntax Highlighting: 
-```bash
-:TSInstall programming_language
-```
 
 - [ ] Tree directory view ==> `sp + n` 
 
@@ -40,18 +41,32 @@ cd ~/.config/nvim
 
 - [ ] Find used files ==> `sp + f + b`
 
-- [ ] Open file directly:
-```bash
-:e openfile
-```
 - [ ] Cheat sheet ==> `sp + c + h`
 
 - [ ] Move between buffers ==> `tab`
+
+
+Command pallete:
 
 - [ ] Split windows:
 ```bash
 :vsp --> vertical split
 :sp --> horizontal split
 ```
+- [ ] Open file directly:
+```bash
+:e openfile
+```
+- [ ] Syntax Highlighting: 
+```bash
+:TSInstall programming_language
+```
+- [ ] Tree filesystem navigation:
+```bash
+a == create a new file (follow by typing new name)
+m == mark 
+c == copy 
+p == past  
+r == rename
 
-
+```
