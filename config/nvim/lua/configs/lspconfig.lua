@@ -21,3 +21,22 @@ lspconfig.tsserver.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+local servers = {
+  "cssls",
+  "html",
+  "eslint",
+  "ts_ls",
+  "yamlls",
+  "bashls",
+  "pyright",
+  "html",
+  "cssls",
+  "jsonls",
+  "dockerls",
+  "terraformls",
+  "ansiblels",
+  "tsserver",
+  "emmet_ls"
+}
+

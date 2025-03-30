@@ -5,12 +5,26 @@
 local M = {}
 
 M.ui = {
-	theme = "catppuccin",
+	theme = "tokyodark",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
+}
+
+M.mason = {
+  pkgs = {
+    "typescript-language-server",
+    "lua-language-server", 
+    "eslint-lsp",
+    "prettierd",
+    "ansible-language-server",
+    "ansible-lint",
+    "snyk",
+    "terraform-ls",
+    "yq"
+  }
 }
 
 return M
