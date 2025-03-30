@@ -6,15 +6,34 @@
 
 - [ ] Steps:
 ```bash
+#!/bin/bash
+
+# Install dependencies
+sudo apt-get install -y curl git tar
+
+# Neovim installation
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-tar xzvf nvim-linux64.tar.gz
-./nvim-linux64/bin/nvim
-mv nvim-linux64 ~/.nvim --> make an alias for binary
-cd .nvim
-mv .nvim ~/.neovim
+tar xzf nvim-linux64.tar.gz
+rm nvim-linux64.tar.gz
+mv nvim-linux64 "$HOME/.neovim"
+
+# Add to PATH for both bash and zsh
+echo 'export PATH="$HOME/.neovim/bin:$PATH"' >> "$HOME/.bashrc"
+echo 'export PATH="$HOME/.neovim/bin:$PATH"' >> "$HOME/.zshrc"
+
+# Source both RC files if they exist
+[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+[ -f "$HOME/.zshrc" ] && source "$HOME/.zshrc"
+
+# Install NvChad
+rm -rf "$HOME/.config/nvim"
+git clone https://github.com/NvChad/starter "$HOME/.config/nvim"
+
+# Launch Neovim
 nvim
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
-cd ~/.config/nvim
+
+git clone https://github.com/Oakwhistle/dots.git
+cp -r dots/nvim/* ~/.config/nvim
 ```
 
 
